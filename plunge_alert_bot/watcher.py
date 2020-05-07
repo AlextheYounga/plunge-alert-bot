@@ -21,7 +21,12 @@ def start(update, context):
         # soup = BeautifulSoup(r.text,'html.parser')
         # price = soup.select_one("span#quote_val").text
 
-        # Random number generator to show functionality.
+        # if (int(price) < 2600):
+        #     context.bot.send_message(chat_id=update.effective_chat.id, text="The market has crashed")
+        #     rt.stop()
+        #     updater.stop()
+
+        # Random number generator to demonstrate functionality.
         price = randrange(4)
         print(price)
         if (price == 2):
