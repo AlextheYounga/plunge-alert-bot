@@ -20,8 +20,8 @@ def start(update, context):
         # print('Checked S&P price')
         # soup = BeautifulSoup(r.text,'html.parser')
         # price = soup.select_one("span#quote_val").text
-        
-        # Random number generator to show functionality. 
+
+        # Random number generator to show functionality.
         price = randrange(4)
         print(price)
         if (price == 2):
@@ -32,11 +32,12 @@ def start(update, context):
     print("starting cron...")
     headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
     url = 'https://www.wsj.com/market-data/quotes/index/SPX'
-    rt = RepeatedTimer(1, priceCheck, headers, url)  # it auto-starts, no need of rt.start()
+    rt = RepeatedTimer(10, priceCheck, headers, url)
+    # integer here determines how many seconds the cron 'beeps' and at what pace it runs the priceCheck function.
 
 
 # Telegram updater functions
-logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
+logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)  # logging not set up yet
 updater = Updater(token=TOKEN, use_context=True)
 # handlers for Telegram-recipient initiated commands, such as /start
 start_handler = CommandHandler('start', start)

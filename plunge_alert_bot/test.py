@@ -2,6 +2,7 @@ from time import sleep
 from .cron import RepeatedTimer
 from random import randrange
 
+# Just me testing how the cron works
 def price(poop):
     if (poop == 'poop'):
         print('yep')
