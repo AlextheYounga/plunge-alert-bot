@@ -1,1 +1,2 @@
-plunge_alert_bot/key.py
+bot/key.py
+.env

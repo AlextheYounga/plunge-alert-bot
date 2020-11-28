@@ -49,7 +49,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'plunge_alert_bot.djangocore.urls'
+ROOT_URLCONF = 'bot.urls'
 
 TEMPLATES = [
     {
@@ -67,7 +67,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'plunge_alert_bot.djangocore.wsgi.application'
+WSGI_APPLICATION = 'bot.wsgi.application'
 
 
 # Database
